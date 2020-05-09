@@ -8,18 +8,20 @@ class GameViewModel: ViewModel(){
 
     val index = MutableLiveData<Int>()
     val name = MutableLiveData<String>()
-    var mail = MutableLiveData<String>()
-    var phone = MutableLiveData<String>()
+    val mail = MutableLiveData<String>()
+    val phone = MutableLiveData<String>()
+    val namelist = MutableLiveData<String>()
     var  registered = 0
     var guests = 0
-    var list = ""
     var listSize = 0
+    var invitednum = 0
     lateinit var people: MutableList<Guest>
 
     init{
         setList()
         listSize = people.size
         index.value = 0
+        namelist.value = "EMPTY"
 
     }
 
@@ -88,5 +90,9 @@ class GameViewModel: ViewModel(){
     }
     fun notAssistingLast(){
         guests ++
+    }
+
+    fun addtoList(){
+        namelist.value = "CAMBIOOOOOO"
     }
 }

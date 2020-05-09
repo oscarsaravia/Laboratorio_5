@@ -6,6 +6,10 @@
         android:icon="@android:drawable/ic_lock_power_off"
         android:title="@string/home" />
     <item
+        android:id="@+id/invitedFragment"
+        android:icon="@drawable/ic_supervisor_account_black_24dp"
+        android:title="@string/invited" />
+    <item
         android:id="@+id/check_button"
         android:icon="@android:drawable/ic_dialog_info"
         android:title="@string/about" />

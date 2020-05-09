@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
     app:startDestination="@id/homeFragment">
 
     <fragment
@@ -10,6 +12,9 @@
         <action
             android:id="@+id/action_homeFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_invitedFragment"
+            app:destination="@id/invitedFragment" />
     </fragment>
     <fragment
         android:id="@+id/check_button"
@@ -48,5 +53,24 @@
             android:name="registrados"
             app:argType="integer"
             android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/invitedFragment"
+        android:name="com.example.android.lab4v2.InvitedFragment"
+        android:label="fragment_invited"
+        tools:layout="@layout/fragment_invited" >
+        <action
+            android:id="@+id/action_invitedFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.android.lab4v2.AddFragment"
+        android:label="AddFragment" >
+        <action
+            android:id="@+id/action_addFragment_to_invitedFragment"
+            app:destination="@id/invitedFragment"
+            app:popUpTo="@id/invitedFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
